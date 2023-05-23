@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style media="screen">
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+        body{
+            margin:0;
+            margin-top: 5%;
+            height: 100%;
+            background: url("img/b12.jpg")  #f0f0f4;
+            background-size: cover;
+            font-family: 'Playfair Display';
+        }
+        .form{
+            position: relative;
+            width: 18rem;
+            top: calc(50% - 9.25rem);
+            margin: auto;
+            font-weight: 300;
+            text-align: center;
+            padding: 80px;
+            border: 1px solid #fff;
+            right:420px;
+            top:67px;
+        }
+        .log-in{
+            margin: 0 0 1.5rem;
+            padding: 0;
+            font-size: 2.5rem;
+            line-height: 1;
+            color: #fff;
+        }
+        .input{
+            margin: 0 0 1.2rem;
+            padding: 0 1rem;
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+            height: 3rem;
+            appearance: none;
+            font-family: 'Playfair Display';
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #556;
+            text-align: center;
+            border: 0;
+            border-radius: 1.5rem;
+            background: #fff;
+        }
+    
+        .forget{
+            color: #fff;
+            text-decoration: none;
+            font-size: .9rem;
+        }
+        .forget:hover{
+            color: #ddd;
+            text-decoration: none;
+        }
+        .log{
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 9rem;
+            height: 3rem;
+            margin: 20px auto;
+            padding: 0;
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 1.5rem;
+            font-family: 'Playfair Display';
+            font-size: 1.2rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 200ms;
+            top: 420px;
+        }
+        .login{
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 9rem;
+            height: 3rem;
+            margin: 20px auto;
+            padding: 0;
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 1.5rem;
+            font-family: 'Playfair Display';
+            font-size: 1.2rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 200ms;
+            top: 333px;
+
+        }
+        .log:hover{
+            background: #fff;
+            color: #000;
+        }
+
+        .login:hover{
+            background: #fff;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <form class="form" id="login">
+        <h1 class="log-in">Please login here</h1>
+        <input class="input" id="email" type="text" placeholder="Email" autofocus>
+        <input class="input" id="pass" type="password" placeholder="Password">
+
+        <button onclick="login()" class="login">Log-in</button>
+        
+        <a href="#" class="forget">Forgot your password?</a>
+        <a href="#" onclick="toggle()" class="forget">Register?</a>
+    </form>
+  
+
+    <form class="form" id="register">
+        <h1 class="log-in">Register here</h1>
+        <input class="input" type="text" id="name" placeholder="Username" autofocus>
+        <input class="input" type="password" id="pass1" placeholder="Password">
+        <input class="input" type="password" id="repass" placeholder="Re-confirm Password">
+        <input class="input" type="text" id="email1" placeholder="Email" autofocus>
+
+        <button onclick="register()" class="log">Register</button>
+
+        <a href="#" onclick="toggle()" class="forget">Please Login</a>
+
+    </form>
+    
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$('#register').hide()
+
+function toggle(){
+    $('#login').toggle()
+    $('#register').toggle()
+}
+
+
+function register(){
+    const name= document.getElementById('name').value
+    const pass1 = document.getElementById('pass1').value
+    const repass = document.getElementById('repass').value
+    const email1 = document.getElementById('email1').value
+if(!localStorage.getItem(name)){
+    if(pass=repass){
+        localStorage.setItem(email,pass)
+        alert('registered!! Please login')
+        toggle()
+    }
+    else{
+        alert('Password incorrect')
+    }
+}else{
+    alert('User Exists')
+} 
+
+}
+
+function login(){
+    const email= document.getElementById('email').value
+    const pass = document.getElementById('pass').value 
+    if(localStorage.getItem(name)){
+        var x =localStorage.getItem(email)
+    if(pass==x){
+        location.href='home.html'
+    }
+    else{
+        alert('password incorrect')
+    }
+    }
+    else{
+        alert('user does not exist. PLease register!!!')
+    }
+}
+</script>
+
+</html>

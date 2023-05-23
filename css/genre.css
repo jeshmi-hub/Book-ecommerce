@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap');
+
+:root{
+
+    --primaryColor: #000;
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background: none repeat scroll ;
+    font-family: 'Rum Raisin';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5rem;
+    background-color: #c9c9c7;
+   
+}
+
+.inner-main-menu{
+    margin: 0 auto;
+   
+    width: 1170px;
+}
+
+.inner-main-menu ul{
+    margin: 0;
+    padding: 0;
+    list-style:  none;
+    text-align: right;
+}
+
+.inner-main-menu ul li{
+    float: none;
+    display: inline-block;
+
+}
+
+.inner-main-menu ul li:nth-child(1){
+    float:left;
+}
+
+.inner-main-menu ul  li:nth-child(2){
+  float: left;
+}
+
+.inner-main-menu ul li:nth-child(3){
+    float: left; 
+}
+
+.inner-main-menu ul li a{
+    color: #000;
+    font-size: 24px;
+    text-decoration: none;
+    display: block;
+    padding: 27px 20px;
+    margin-left: 40px;
+}
+
+.inner-main-menu ul li a:hover{
+    color:#fff;
+}
+
+#main-menu{
+    width: 100%;
+    position: relative;
+}
+
+.logo{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left:40%;
+    top:0;
+    content: "";
+
+}
+
+#search{
+    width: 250px;
+    padding: 5px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    overflow: hidden;
+    font-size: 20px;
+    text-align: center;
+   position: relative;
+   margin-right: 6rem;
+
+}
+
+.icon{
+    width: 35px;
+    height: 28px;
+    position: absolute;
+    left:1190px;
+    top: 25px;
+  
+}
+
+.icon li{
+    list-style: none;
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav hr{
+    position: absolute;
+    top: 85px;
+    left: 270px;
+}
+
+.book-quotes{
+    height: 30vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+ }
+ 
+ .book-quotes h1{
+     font-size: 4rem;
+     color: #000;
+     margin-bottom: 2rem;
+ }
+ 
+ .book-quotes h2{
+     color: #000;
+     font-size: 2rem;
+ }
+ 
+ .books{
+	width: 85%;
+	height: 730px;
+	border: 2px solid black;
+	margin-left: 10%;
+	margin-top: 1%;
+	box-shadow: 0 5px 38px #c9c;
+	background: linear-gradient(0deg, rgba(0,0,0,09) 50%, transparent);
+	border-radius: 20px;
+}
+.more-book h2{
+	color: aliceblue;
+    padding: 5px 27px;
+    font-weight: 2rem;
+    top: auto;
+}
+.more-book img{
+	height: 180px;
+	width: 12%;
+	padding:10px;
+	margin-top: -1%;
+	transition: .5s;
+	margin-left: 4%;
+}
+.more-book img:hover{
+	transform: scale(1.05);
+	box-shadow: 0 5px 8px rosybrown;
+}
+
+.footer{
+    width: 85%;
+    height: 50vh;
+    margin: 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+ .about{
+    height: 15vh;
+    position: absolute;
+    margin-right: 45rem;
+    margin-top: 0rem;
+}
+    
+.about .h1{
+    text-align: center;
+    font-size: 2rem;
+
+}
+  
+ .about .p{
+    font-size: 1.3rem;
+}
+
+.vline{
+border-left: 6px solid black;
+height: 500px;
+}
+
+.social-icons{
+    height: 15vh;
+    position: absolute;
+    margin-left: 35rem;
+
+} 
+ 
+.footer .social-icons .h1{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.social{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-left: -4.4rem;
+}
+
+.social li{
+    list-style: none;
+}
+
+.social li a{
+   position: relative;
+   display: inline-block;
+   margin-right: 15px;
+   width: 50px;
+   height: 50px;
+   background:black;
+   display: flex;
+   justify-content: center;
+   transition: 0.2s ease-in-out;
+}
+
+.social li a img{
+    filter: invert(1);
+    transform: scale(0.5);
+}
+
+.social li a:hover{
+    background-color: #bbb;
+    transform: translateY(-10px);
+}
